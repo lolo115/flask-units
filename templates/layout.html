@@ -2,17 +2,20 @@
 <html>
   <head>
     {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>{% block title %}{% endblock %} - My Webpage</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+        <!-- bootstrap css documentation here : https://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>{% block title %} glouglou {% endblock %} - My Webpage</title>
     {% endblock %}
   </head>
-  
+
   <body>
-    <div id="content">{% block content %}{% endblock %}</div>
-    
-    <div id="footer">
+    <div id="content" class="container-fluid" >{% block content %}{% endblock %}</div>
+
+    <div id="footer" class="container-fluid">
       {% block footer %}
-      &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
+      &copy; Copyright 2010 by <a href="https://www.premiseo.com">Laurent Leturgez@Premiseo.com</a>.
       {% endblock %}
     </div>
   </body>
